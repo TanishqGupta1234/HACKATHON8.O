@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e5d8e, #00093c);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 36px; /* Increased font size to cover the whole page */
+}
+
+.gendertit {
+    display: block;
+    font-size: 36px; /* Increased font size */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+}
+
+.category label {
+    margin-bottom: 10px;
+}
+
+.gender input[type="radio"] {
+    display: none;
+}
+
+.gender input[type="radio"] + span {
+    cursor: pointer;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.gender input[type="radio"]:checked + span {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}

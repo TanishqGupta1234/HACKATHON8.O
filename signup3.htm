@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="Omar" name="viewport">
+    <title>Sign up page</title>
+    <link rel="stylesheet" href="signup.css" />
+</head>
+<script>
+    function validateForm() {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var phoneNumber = document.getElementById("phonenumber").value;
+        var email = document.getElementById("email").value;
+
+        // Check if any field is empty
+        if (firstName === "" || lastName === "" || phoneNumber === "" || email === "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+
+        // Validate email format
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert("Invalid email address");
+            return false;
+        }
+
+        // Validate phone number format
+        function validateForm() {
+        var phoneNumber = document.getElementById("phonenumber").value;
+        var phonePattern = /^\d{10}$/;
+        if (!phonePattern.test(phoneNumber)) {
+            alert("Invalid phone number format. Please enter a 10-digit number without any spaces or special characters.");
+            return false;
+        }
+        return true;
+    }
+}
+</script>
+<body>
+    <div class="container">
+        <div class="title">ਮਰੀਜ਼ਾਂ ਦਾ ਡਾਟਾ</div>
+        <form action="/action_page.php">
+            <div class="userinfo">
+                <div class="input">
+                    <span class="details"><h3>ਪਹਿਲਾ ਨਾਂ</h3></span>
+                    <input type="text" placeholder="ਆਪਣਾ ਪਹਿਲਾ ਨਾਮ ਦਰਜ ਕਰੋ" autocomplete="on" required>
+                </div>
+                <div class="input">
+                    <span class="details"> <h3>ਆਖਰੀ ਨਾਂਮ</h3></span>
+                    <input type="text" placeholder="ਆਪਣਾ ਆਖਰੀ ਨਾਮ ਦਰਜ ਕਰੋ" autocomplete="on" required>
+                </div>
+                <div class="input" style="align-items: center;">
+                    <span class="details"><h3>ਫੋਨ ਨੰਬਰ</h3></span>
+                    <input type="tel" id="phonenumber" name="phonenumber" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" autocomplete="on" required>
+                </div>
+            </div>
+            
+            <div class="button">
+                <a href="gender2.htm" target="_self">
+                <input type="button" value="ਜਮ੍ਹਾਂ ਕਰੋ"></a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

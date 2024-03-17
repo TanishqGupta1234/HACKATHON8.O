@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Facility Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ਆਪਣੀ ਦਵਾਈ ਦੀ ਸਹੂਲਤ ਚੁਣੋ</h1>
+        <form id="medicationForm">
+            <div class="medication-list">
+                <label for="ayurveda" class="medication-option">
+                    <input type="checkbox" id="ayurveda" name="medication" value="Ayurveda" style="display: none;">
+                    <img src="PHOTO-2024-03-17-03-22-06.jpg" alt="Ayurveda" onclick="selectMedication('ayurveda')"><br>
+                    <span class="medication-text"><H2>ਆਯੁਰਵੇਦ</H2></span>
+                </label><br>
+
+                <label for="homeopathic" class="medication-option">
+                    <input type="checkbox" id="homeopathic" name="medication" value="Homeopathic" style="display: none;">
+                    <img src="PHOTO-2024-03-17-03-22-06 2.jpg" alt="Homeopathic Medicine" onclick="selectMedication('homeopathic')">
+                    <span class="medication-text"><h2>ਹੋਮਿਓਪੈਥਿਕ ਦਵਾਈ</h2></span>
+                </label><br>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function selectMedication(id) {
+            var checkbox = document.getElementById(id);
+            checkbox.checked = !checkbox.checked;
+        }
+    </script>
+</body>
+</html>
